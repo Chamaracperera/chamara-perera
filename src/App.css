@@ -9,7 +9,7 @@
 
 body {
     min-height: 100vh;
-    background: url("src/background.jpg") no-repeat center / cover fixed;
+    background: url("/src/background.jpg") no-repeat center / cover fixed;
     padding: 20px;
     color: white;
 }
