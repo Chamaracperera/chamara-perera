@@ -73,6 +73,17 @@ export default function Projects() {
             <a href="https://www.figma.com/proto/Z8Pes0QsViHrTE7BaB3OGb/FoT-Live-app-android?node-id=7-126&p=f&t=ocqHrX8jR1e4L3Tw-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=45%3A27" className="btn project-btn">View Demo</a>
           </div>
         </div>
+        <div className="project-card">
+          <img src="/src/project5.png" alt="Elephat House Beverage" />
+          <h3>Elephat House Beverage</h3>
+          <p>A crisp, colorful Figma design for Elephant House Beverages with a refreshing user experience.</p>
+          <div className="project-tech">
+            <div className="tech-item" data-tooltip="Figma"><FaFigma /></div>
+          </div>
+          <div className="project-buttons">
+            <a href="https://www.figma.com/proto/BEOyAYhNvymRlUtEVTCTwt/Elephant-House-Drinks?node-id=1-123&p=f&t=i7EAhqJOo6A9hoLi-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A123" className="btn project-btn">View Demo</a>
+          </div>
+        </div>
       </div>
 
       {/* Mobile / Android Projects */}
@@ -81,7 +92,7 @@ export default function Projects() {
         {/* FoT Live App */}
         <div className="project-card">
           <img src="/src/project4.png" alt="FoT Live App"/>
-          <h3>FoT Live APP</h3>
+          <h3>FoT Live Mobile APP</h3>
           <p>A news and updates platform for the Faculty of Technology, University of Colombo.</p>
           <div className="project-tech">
             <div className="tech-item" data-tooltip="Android Studio"><SiAndroid /></div>
