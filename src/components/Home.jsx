@@ -27,7 +27,7 @@ export default function Home() {
           development, UI/UX design, and interactive animations.Passionate about solving real-world problems through technology.
         </p>
         <div className="download-social">
-          <a href="/src/cv.pdf" download className="btn">
+          <a href="/src/Chamara Perera CV.pdf" download className="btn">
             <i className="ri-download-line"></i> Download CV
           </a>
           <div className="social-icons">
