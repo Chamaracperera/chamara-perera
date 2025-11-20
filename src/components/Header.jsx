@@ -11,6 +11,8 @@ export default function Header() {
         <a href="#about">About</a>
         <a href="#services">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
       <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>

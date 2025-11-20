@@ -4,6 +4,8 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Certifications from "./components/Certifications";
+import Education from "./components/Education";
 import Footer from "./components/Footer";
 import "./App.css"; // this is your style file
 
@@ -16,7 +18,8 @@ function App() {
         <About />
         <Services />
         <Projects />
-        
+        <Certifications />
+        <Education />
         <Contact />
       </main>
       <Footer />

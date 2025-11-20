@@ -183,6 +183,10 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.8s cubic-bezier(.23, 1, .32, 1);
+}
+.home-img .img-box:hover img {
+    transform: scale(1.1);
 }
 
 section {
@@ -228,6 +232,7 @@ section h2 {
 }
 
 
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -241,10 +246,13 @@ section h2 {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s;
+    position: relative;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    border-color: rgba(0, 191, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
 }
 
 .service-card img {
@@ -255,6 +263,13 @@ section h2 {
     margin-bottom: 15px;
 }
 
+.tools-icons img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.tools-icons img:hover {
+  transform: scale(1.2);
+}
 
 /* Projects Section */
 section#projects {
@@ -291,6 +306,8 @@ section#projects {
 
 .project-card:hover {
     transform: translateY(-10px);
+    border-color: rgba(0, 191, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
 }
 
 .project-card img {
@@ -368,29 +385,102 @@ section#projects {
     font-size: 1.2rem;
     margin-bottom: 2px;
 }
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-    }
-
-    .project-card img {
-        height: 160px;
-    }
+/* Certificates grid */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin-bottom: 40px;
 }
 
-@media (max-width: 576px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .project-card img {
-        height: 150px;
-    }
+/* Individual certificate cards */
+.certificate-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 260px;
+    margin: 0 auto;
+    font-size: 0.8rem;
 }
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 191, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
+    z-index: 1;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+}
+
+/* Initially hidden */
+.popup-tooltip {
+    position: absolute;
+    top: 100%; /* place below the card */
+    left: 0;
+    width: 100%; /* full width of the card */
+    background:  #000 !important; /* dark background */
+    color: #fff;
+    padding: 15px 20px; /* left padding included */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    transform: translateY(10px);
+    text-align: left;
+    
+}
+
+/* Show popup on hover */
+.certificate-card-inner:hover .popup-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 999;
+}
+
+
+/* List inside popup */
+.popup-tooltip ul {
+    list-style: none;
+    padding-left: 1rem; /* left padding for content */
+}
+
+.popup-tooltip li {
+    margin-bottom: 8px;
+    font-size: 0.6rem;
+    line-height: 1.4;
+}
+
+/* Optional: arrow below the card pointing to the card */
+.popup-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px; /* adjust as needed */
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,0,0,0.85) transparent;
+}
+
+/* Tooltip list styling */
+.popup-tooltip ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.popup-tooltip li {
+  margin-bottom: 6px;
+}
+
 
 
 /* Tooltip */
@@ -419,8 +509,276 @@ section#projects {
   margin-bottom: 4px;
 }
 
+/* Academic Journey Timeline Styles */
+
+/* Timeline Section Container */
+.academic-journey {
+    margin-top: 80px;
+    padding: 60px 20px;
+}
+
+.academic-journey h3 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
 
 
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* Center Timeline Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: rgba(0, 191, 255, 0.3);
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .timeline-line {
+        display: block;
+    }
+}
+
+/* Timeline Items Wrapper */
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Individual Timeline Item */
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Left Side Items */
+.timeline-item.left {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+/* Right Side Items */
+.timeline-item.right {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: #00bfff;
+    border-radius: 50%;
+    border: 4px solid #0a0a0a;
+    z-index: 10;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .timeline-dot {
+        display: block;
+    }
+}
+
+/* Education Card */
+.education-card {
+    width: 80%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Left cards positioning */
+.timeline-item.left .education-card {
+    margin-right: auto;
+}
+
+/* Right cards positioning */
+.timeline-item.right .education-card {
+    margin-left: auto;
+}
+
+@media (min-width: 769px) {
+    .timeline-item.left .education-card {
+        margin-right: calc(50% + 30px);
+    }
+    
+    .timeline-item.right .education-card {
+        margin-left: calc(50% + 30px);
+    }
+}
+
+.education-card:hover {
+    border-color: rgba(0, 191, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Card Header with Logo and Info */
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.institution-logo {
+    font-size: 48px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* If using actual images instead of emojis */
+.institution-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.institution-info {
+    flex: 1;
+}
+
+.institution-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.institution-period {
+    color: #00bfff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Degree Information */
+.degree-info {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .academic-journey {
+        margin-top: 60px;
+        padding: 40px 10px;
+    }
+
+    .timeline-container {
+        padding: 20px 0;
+    }
+
+    .timeline-items {
+        gap: 40px;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    .timeline-item.left .education-card,
+    .timeline-item.right .education-card {
+        margin: 0 auto;
+    }
+
+    .education-card {
+        max-width: 100%;
+    }
+
+    .card-header {
+        gap: 12px;
+    }
+
+    .institution-logo {
+        font-size: 40px;
+        min-width: 45px;
+    }
+
+    .institution-logo img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .institution-name {
+        font-size: 18px;
+    }
+
+    .institution-period {
+        font-size: 13px;
+    }
+
+    .degree-info {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .academic-journey h3 {
+        font-size: 26px;
+    }
+
+    .timeline-subtitle {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+    .institution-logo {
+        font-size: 36px;
+        min-width: 40px;
+    }
+
+    .institution-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .institution-name {
+        font-size: 16px;
+    }
+
+    .institution-period {
+        font-size: 12px;
+    }
+
+    .degree-info {
+        font-size: 13px;
+    }
+}
+
+
+/* Contact Section */
 .contact-container {
     display: flex;
     gap: 40px;
@@ -450,6 +808,8 @@ section#projects {
 .contact-info a:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: underline;
+    
+    
 }
 
 .contact-social {
@@ -566,6 +926,14 @@ section#projects {
     .mobile-menu-btn {
         display: block;
     }
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .project-card img {
+        height: 160px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -581,7 +949,17 @@ section#projects {
         width: 20vw;
         height: 20vw;
     }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+
 }
+
 
 footer {
     margin-left: 5%;  /* Matches your content padding */

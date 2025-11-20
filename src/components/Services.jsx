@@ -48,7 +48,7 @@ export default function Services() {
   className="tools-icons"
   data-aos="fade-up"
   data-aos-delay="500"
-  style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '1rem' }}
+  style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '1rem', justifyContent: 'center' }}
 >
   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer" title="HTML5">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
