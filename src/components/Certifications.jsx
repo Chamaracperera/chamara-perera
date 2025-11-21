@@ -73,7 +73,7 @@ export default function Certificates() {
             <p>June 25, 2024</p>
             <div className="popup-tooltip">
               <ul>
-                <li><strong>AWS Academy Graduate - Cloud Foundations - Training Badge</strong><br/>
+                <li><strong>AWS Academy Graduate - Cloud Foundations - Training Badge</strong><br/><br/>
                     Issued by Amazon Web Services Training and Certification ✔️</li>
               </ul>
             </div>
@@ -90,7 +90,7 @@ export default function Certificates() {
             <p>November, 2025</p>
             <div className="popup-tooltip">
               <ul>
-                <li><strong>Figma Certification Course</strong><br/>
+                <li><strong>Figma Certification Course</strong><br/><br/>
                     Issued by DP Education IT Campus ✔️</li>
               </ul>
             </div>
@@ -105,7 +105,7 @@ export default function Certificates() {
             <p>(Ongoing)</p>
             <div className="popup-tooltip">
               <ul>
-                <li><strong>React Certification Course</strong><br/>
+                <li><strong>React Certification Course</strong><br/><br/>
                     Issued by DP Education IT Campus ⏳</li>
               </ul>
             </div>
