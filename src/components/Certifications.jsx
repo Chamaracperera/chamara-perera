@@ -12,8 +12,8 @@ export default function Certificates() {
   }, []);
 
   return (
-    <section id="certificcations">
-      <h2 data-aos="fade-down">Certificates</h2>
+    <section id="certifications">
+      <h2 data-aos="fade-down">Certifications</h2>
 
       <div className="certificates-grid">
         {/* Certificate Card 1 */}
@@ -82,16 +82,31 @@ export default function Certificates() {
         {/* Certificate Card 4 */}
         <div className="certificate-card">
           <div className="certificate-card-inner" data-aos="zoom-in" data-aos-delay="150">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/posts/chamara-perera-b832762b7_uiux-figma-designlearning-activity-7397651646941446144-b6hh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwJLhMBqQrheZjOj_ImgYYoCveTbaL-Fk4" target="_blank" rel="noopener noreferrer">
                 <img src="src/cert4.jpg" alt="Figma" />
             </a>
             <h3>Figma Certification</h3>
-            <p><strong>DP Education</strong> </p>
-            <p>(Ongoing)</p>
+            <p><strong>DP Education IT Campus</strong> </p>
+            <p>November, 2025</p>
             <div className="popup-tooltip">
               <ul>
                 <li><strong>Figma Certification Course</strong><br/>
-                    Issue by DP Education ⏳ </li>
+                    Issued by DP Education IT Campus ✔️</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="certificate-card">
+          <div className="certificate-card-inner" data-aos="zoom-in" data-aos-delay="150">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="src/cert5.jpg" alt="React Certification" />
+            </a>
+            <h3>React Certification</h3>
+            <p>(Ongoing)</p>
+            <div className="popup-tooltip">
+              <ul>
+                <li><strong>React Certification Course</strong><br/>
+                    Issued by DP Education IT Campus ⏳</li>
               </ul>
             </div>
           </div>
