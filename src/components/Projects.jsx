@@ -91,7 +91,7 @@ export default function Projects() {
       <div className="projects-grid" data-aos="fade-up" data-aos-delay="200">
         {/* FoT Live App */}
         <div className="project-card">
-          <img src="/src/project4.png" alt="FoT Live App"/>
+          <img src="/src/project41.png" alt="FoT Live App"/>
           <h3>FoT Live Mobile APP</h3>
           <p>A news and updates platform for the Faculty of Technology, University of Colombo.</p>
           <div className="project-tech">
