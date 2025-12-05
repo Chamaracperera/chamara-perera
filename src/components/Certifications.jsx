@@ -113,22 +113,7 @@ export default function Certificates() {
             </div>
           </div>
         </div>
-        <div className="certificate-card">
-          <div className="certificate-card-inner" data-aos="zoom-in" data-aos-delay="150">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <img src="src/cert5.jpg" alt="React Certification" />
-            </a>
-            <h3>React Certification</h3>
-            <p>(Ongoing)</p>
-            <div className="popup-tooltip">
-              <ul>
-                <li><strong>React Certification Course</strong><br/><br/>
-                    Issued by DP Education IT Campus ⏳</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-         {/* Certificate Card 7 */}
+        {/* Certificate Card 7 */}
         <div className="certificate-card">
           <div className="certificate-card-inner" data-aos="zoom-in" data-aos-delay="150">
             <a href="https://www.linkedin.com/posts/chamara-perera-b832762b7_datascience-analytics-hplife-activity-7315396087802937345-9wCp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwJLhMBqQrheZjOj_ImgYYoCveTbaL-Fk4" target="_blank" rel="noopener noreferrer">
@@ -147,6 +132,22 @@ export default function Certificates() {
             </div>
           </div>
         </div>
+        <div className="certificate-card">
+          <div className="certificate-card-inner" data-aos="zoom-in" data-aos-delay="150">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="src/cert5.jpg" alt="React Certification" />
+            </a>
+            <h3>React Certification</h3>
+            <p>(Ongoing)</p>
+            <div className="popup-tooltip">
+              <ul>
+                <li><strong>React Certification Course</strong><br/><br/>
+                    Issued by DP Education IT Campus ⏳</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
   );

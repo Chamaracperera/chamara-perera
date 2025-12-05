@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { 
-  FaHtml5, FaCss3Alt, FaReact, FaFigma, FaJava, FaJs, FaDatabase, FaCode 
+  FaHtml5, FaCss3Alt, FaReact, FaFigma, FaJava, FaJs, FaDatabase, FaCode, FaGlobe 
 } from 'react-icons/fa';
 import { SiFirebase, SiAdobe, SiAndroid } from 'react-icons/si';
 import AOS from 'aos';
@@ -101,9 +101,25 @@ export default function Projects() {
           </div>
           <div className="project-buttons">
             <a href="https://github.com/Chamaracperera/newsapp.git" className="btn project-btn">View Project</a>
-            <a href="https://www.figma.com/proto/Z8Pes0QsViHrTE7BaB3OGb/FoT-Live-app-android?node-id=7-126&p=f&t=ocqHrX8jR1e4L3Tw-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=45%3A27" className="btn project-btn">View Demo</a>
+            <a href="https://drive.google.com/file/d/1EYvhHdQWK7NVgpwPumteSZ3jIMz_F4iy/view?usp=sharing" className="btn project-btn">Download APK</a>
           </div>
         </div>
+        {/* Mobile Data Speed Tester */}
+        <div className="project-card">
+          <img src="/src/project6.png" alt="Mobile Data Speed Tester"/>
+          <h3>Mobile Data Speed Tester</h3>
+          <p>An Android app to measure accurate internet speeds for content-based packages (WhatsApp, Facebook, TikTok, etc.) and general mobile data.</p>
+          <div className="project-tech">
+            <div className="tech-item" data-tooltip="Android Studio"><SiAndroid /></div>
+            <div className="tech-item" data-tooltip="Cloudflare"><FaGlobe /></div>
+            <div className="tech-item" data-tooltip="Java"><FaJava /></div>
+          </div>
+          <div className="project-buttons">
+            <a href="https://github.com/Chamaracperera/AppSpeedTest.git" className="btn project-btn">View Project</a>
+            <a href="https://github.com/Chamaracperera/AppSpeedTest/blob/66f32e5e44e316366a5bc4966d3a044a6617bd5f/assets/App%20Speed%20Test.apk" className="btn project-btn">Download APK</a>
+          </div>
+        </div>
+
       </div>
 
       {/* Adobe Animate / Interactive Projects */}
